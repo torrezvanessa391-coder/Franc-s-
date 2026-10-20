@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Français Facile | Aprende francés</title>
+<meta name="description" content="Aprende francés a tu ritmo: más de 200 frases con audio y buscador, vocabulario con pronunciación, juegos y cultura francesa. Gratis y sin registro.">
+<meta name="theme-color" content="#1b2f78">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Français Facile | Aprende francés">
+<meta property="og:description" content="Frases con audio, vocabulario y juegos para aprender francés a tu ritmo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥖%3C/text%3E%3C/svg%3E">
+<style>
+:root{--ink:#1b2f78;--text:#1d2333;--muted:#5b6479;--red:#c9333f;--paper:#fdfdfb;--line:#dde3f5;--line2:#b9c5e8;--ok:#1f7a55;--bad:#b3261e;--serif:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background-color:var(--paper);background-image:linear-gradient(90deg,transparent 31px,var(--line) 32px),linear-gradient(transparent 31px,var(--line2) 32px),repeating-linear-gradient(transparent 0 7px,#eef1fb 7px 8px);background-size:32px 32px,32px 32px,auto}
+body::before{content:"";position:fixed;inset:0 auto 0 clamp(8px,3vw,36px);width:2px;background:#e8a0a6;z-index:-1}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid #0b5fff;outline-offset:2px}
+h1:focus{outline:0}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.2;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:1.6rem}
+h3{font-size:1.25rem}
+p{margin:0 0 .8rem}
+.muted{color:var(--muted)}
+.skip{position:absolute;left:8px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:6px;z-index:9}
+.skip:focus{top:8px}
+header{background:var(--paper);border-bottom:2px solid var(--ink);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding:14px max(20px,calc((100% - 1100px)/2))}
+.brand{font:700 1.6rem var(--serif);text-decoration:none;color:var(--ink)}
+.brand em{color:var(--red)}
+nav{display:flex;flex-wrap:wrap;gap:2px 6px}
+nav a{padding:8px 11px;text-decoration:none;color:var(--text);font-weight:600;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--line2)}
+nav a[aria-current=page]{color:var(--red);border-color:var(--red)}
+main{max-width:1100px;margin:0 auto;padding:32px 20px 24px}
+.page>.muted{max-width:60ch}
+.btn{display:inline-block;font:inherit;font-weight:600;text-decoration:none;text-align:center;border:2px solid var(--ink);background:var(--ink);color:#fff;border-radius:8px;padding:9px 16px;min-height:44px;cursor:pointer}
+.btn:hover{filter:brightness(1.15)}
+.btn.red{background:var(--red);border-color:var(--red)}
+.btn.alt{background:#fff;color:var(--ink)}
+.btn.alt:hover{background:#eef2fc;filter:none}
+.btn.alt[aria-pressed=true]{background:#fff4d6;border-color:#c98a00}
+.btn.small{min-height:40px;padding:6px 12px;font-size:.92rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.playing,.ico.playing{background:var(--ink);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.card{background:#fff;border:1px solid var(--line2);border-radius:6px;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:20px 0}
+.card .btn{margin-top:6px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+.hero-copy{padding:clamp(24px,5vw,52px)}
+.hero-copy p{font-size:1.1rem;max-width:46ch}
+.photo{min-height:300px;background:linear-gradient(160deg,var(--ink),#4a66b8);display:flex}
+.photo img{width:100%;height:100%;object-fit:cover}
+.lvl{border-top:5px solid var(--ink)}
+.lvl:nth-child(2){border-color:var(--ok)}
+.lvl:nth-child(3){border-color:var(--red)}
+.tag{display:inline-block;background:#eef2fc;color:var(--ink);border-radius:99px;padding:3px 11px;font-size:.85rem;font-weight:600;margin-bottom:8px}
+.emoji{font-size:2.4rem;line-height:1;margin-bottom:8px}
+.fr{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--ink)}
+.line{margin:0 0 .6rem;display:flex;gap:10px;align-items:flex-start}
+.line .fr{font-size:1.15rem}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:16px}
+.word{text-align:center}
+.word .emoji{font-size:3.4rem}
+.word .btn{margin:2px}
+.field{display:block;width:100%;max-width:420px;font:inherit;padding:11px 12px;border:2px solid var(--line2);border-radius:8px;margin:6px 0 12px;background:#fff}
+label{font-weight:600}
+.bar{height:14px;background:#fff;border:1px solid var(--line2);border-radius:99px;overflow:hidden;margin:12px 0 6px}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:14px 0}
+.stat{background:#eef2fc;border-radius:8px;padding:10px 12px;text-align:center}
+.stat b{display:block;font:700 1.8rem var(--serif);color:var(--ink)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.opts{display:grid;gap:10px;margin:16px 0}
+.opts .btn{text-align:left}
+.btn.alt.right{border-color:var(--ok);background:#e7f4ee;color:var(--ok)}
+.btn.alt.wrong{border-color:var(--bad);background:#fbeae8;color:var(--bad)}
+.fb{min-height:1.6em;font-weight:600}
+.fb.ok{color:var(--ok)}
+.fb.bad{color:var(--bad)}
+.place img{width:100%;height:190px;object-fit:cover;border-radius:4px;margin-bottom:12px;background:#eef2fc}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{font:inherit;font-weight:600;border:2px solid var(--line2);background:#fff;color:var(--ink);border-radius:99px;padding:6px 14px;min-height:40px;cursor:pointer}
+.chip:hover{background:#eef2fc}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.plist{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.prow{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line2);border-radius:6px;padding:12px 14px}
+.prow .txt{min-width:0}
+.prow .fr{display:block;font-size:1.15rem;overflow-wrap:anywhere}
+.prow .es{display:block;color:var(--muted)}
+.tools{display:flex;gap:6px;flex-shrink:0}
+.ico{min-width:44px;min-height:44px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:8px;font-size:1.1rem;line-height:1;cursor:pointer;padding:0 8px}
+.ico:hover{background:#eef2fc}
+.ico.on{background:#fff4d6;border-color:#c98a00;color:#8a5d00}
+.ico.sm{min-width:40px;min-height:40px;flex-shrink:0}
+.pod{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin:20px 0;border-left:6px solid var(--red)}
+.pod .fr{font-size:1.5rem;display:block}
+.note{background:#fff4d6;border:1px solid #e6c36a;border-radius:6px;padding:10px 14px;font-size:.92rem}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-top:12px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--text);color:#fff;padding:10px 16px;border-radius:8px;max-width:90%;z-index:10}
+footer{max-width:1100px;margin:0 auto;padding:24px 20px 40px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.photo{min-height:220px;max-height:280px}nav a{padding:8px}}
+@media(max-width:560px){.prow{flex-direction:column;align-items:stretch}.tools{justify-content:flex-end}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header>
+<a class="brand" href="#inicio">Français <em>Facile</em></a>
+<nav aria-label="Principal">
+<a href="#inicio">Inicio</a><a href="#niveles">Niveles</a><a href="#lecciones">Lecciones</a><a href="#frases">Frases</a><a href="#vocabulario">Vocabulario</a><a href="#juegos">Juegos</a><a href="#francia">Francia</a><a href="#perfil">Mi perfil</a>
+</nav>
+<button class="btn alt small" id="speedBtn" type="button" aria-pressed="false">🐢 Voz lenta: no</button>
+</header>
+<main id="main">
+<noscript><p class="card">Esta página necesita JavaScript para mostrar las lecciones y los juegos.</p></noscript>
+
+<section id="inicio" class="page">
+<div class="hero">
+<div class="hero-copy">
+<h1 tabindex="-1">Aprende francés a tu ritmo.</h1>
+<p>Más de 200 frases con audio, vocabulario, juegos y cultura francesa. Sin registro y sin instalar nada.</p>
+<div class="actions"><a class="btn red" href="#lecciones">Empezar a aprender</a><a class="btn alt" href="#frases">Buscar frases</a></div>
+</div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80" alt="Vista de París con la Torre Eiffel" width="1000" height="700" decoding="async" onerror="this.remove()"></div>
+</div>
+
+<div class="card pod">
+<div>
+<span class="tag">Frase del día</span>
+<span class="fr" lang="fr" id="podFr"></span>
+<span class="muted" id="podEs"></span>
+</div>
+<div class="tools">
+<button class="ico" id="podPlay" type="button" data-say="" aria-label="Escuchar la frase">🔊</button>
+<button class="ico" id="podSlow" type="button" data-say="" data-rate=".5" aria-label="Escuchar despacio" title="Despacio">🐢</button>
+<button class="btn alt small" id="podNext" type="button">🎲 Otra frase</button>
+</div>
+</div>
+
+<h2 style="margin-top:32px">¿Qué quieres aprender hoy?</h2>
+<div class="grid">
+<article class="card"><div class="emoji" aria-hidden="true">💬</div><h3>Frases útiles</h3><p>Más de 200 frases por tema, con audio, buscador y favoritas.</p><a class="btn" href="#frases">Ver frases</a></article>
+<article class="card"><div class="emoji" aria-hidden="true">🥖</div><h3>Aprende palabras</h3><p>Objetos cotidianos con su traducción y pronunciación.</p><a class="btn" href="#vocabulario">Ir al vocabulario</a></article>
+<article class="card"><div class="emoji" aria-hidden="true">📚</div><h3>Lecciones</h3><p>Saludos, verbos, números, días, colores y más.</p><a class="btn" href="#lecciones">Ver lecciones</a></article>
+<article class="card"><div class="emoji" aria-hidden="true">🎯</div><h3>Aprende jugando</h3><p>Traduce, escucha y comprueba lo que ya sabes.</p><a class="btn" href="#juegos">Jugar</a></article>
+</div>
+<div class="card">
+<h2 id="hello">Tu progreso</h2>
+<p class="muted">Tu avance se guarda en este navegador. No se envía a ningún servidor.</p>
+<div class="stats">
+<div class="stat"><b id="points">0</b><span>puntos</span></div>
+<div class="stat"><b id="level">1</b><span>nivel</span></div>
+<div class="stat"><b id="streak">0</b><span>🔥 días seguidos</span></div>
+<div class="stat"><b id="favCount">0</b><span>⭐ favoritas</span></div>
+</div>
+<div class="bar" id="barwrap" role="progressbar" aria-label="Progreso hacia el siguiente nivel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="bar"></i></div>
+<p class="muted" id="next"></p>
+</div>
+</section>
+
+<section id="niveles" class="page" hidden>
+<h1 tabindex="-1">Niveles de francés</h1>
+<p class="muted">Avanza desde lo básico hasta un nivel avanzado.</p>
+<div class="grid">
+<article class="card lvl"><span class="tag">Principiante</span><h3>A1 Inicial</h3><p>Saludos, presentaciones, números y frases muy sencillas.</p><a class="btn" href="#lecciones">Empezar A1</a></article>
+<article class="card lvl"><span class="tag">Básico e intermedio</span><h3>A2 y B1</h3><p>Hablar de tu rutina, gustos, experiencias y planes.</p><a class="btn alt" href="#frases">Ver frases</a></article>
+<article class="card lvl"><span class="tag">Avanzado</span><h3>B2, C1 y C2</h3><p>Comprender textos, argumentar y expresarte con precisión.</p><a class="btn alt" href="#lecciones">Explorar</a></article>
+</div>
+<p class="muted">Por ahora hay lecciones de nivel A1 y frases de uso diario. El resto de niveles llegará más adelante.</p>
+</section>
+
+<section id="lecciones" class="page" hidden>
+<h1 tabindex="-1">Lecciones básicas</h1>
+<p class="muted">Pulsa 🔊 junto a cada expresión para escucharla, o «Escuchar todo» para oír la lección completa.</p>
+<div class="grid" id="lessons"></div>
+</section>
+
+<section id="frases" class="page" hidden>
+<h1 tabindex="-1">Frases en francés</h1>
+<p class="muted">Busca en francés o en español, elige un tema y escucha cada frase. Usa 🐢 para oírla despacio y ☆ para guardarla.</p>
+<label for="psearch">Buscar una frase</label>
+<input class="field" id="psearch" type="search" placeholder="hola, gracias, hotel, billet…" autocomplete="off" style="max-width:520px">
+<div class="chips" id="chips" role="group" aria-label="Filtrar por tema"></div>
+<p class="muted" id="pcount" aria-live="polite"></p>
+<p class="note voiceInfo" hidden></p>
+<p id="pempty" class="muted" hidden></p>
+<ul class="plist" id="plist"></ul>
+</section>
+
+<section id="vocabulario" class="page" hidden>
+<h1 tabindex="-1">Vocabulario</h1>
+<p class="muted">Lee la palabra en francés y escucha cómo se pronuncia.</p>
+<label for="search">Buscar una palabra</label>
+<input class="field" id="search" type="search" placeholder="taza, livre, manzana…" autocomplete="off">
+<p id="empty" class="muted" hidden>No hay resultados. Prueba con otra palabra.</p>
+<div class="vgrid" id="vocab"></div>
+</section>
+
+<section id="juegos" class="page" hidden>
+<h1 tabindex="-1">Juegos y práctica</h1>
+<p class="muted">Cada ejercicio suma 10 puntos la primera vez que lo aciertas. Cada 100 puntos subes de nivel.</p>
+<div class="chips" id="modes" role="group" aria-label="Modo de juego">
+<button class="chip" type="button" data-mode="vocab" aria-pressed="true">🥖 Palabras</button>
+<button class="chip" type="button" data-mode="phrase" aria-pressed="false">💬 Frases</button>
+<button class="chip" type="button" data-mode="trans" aria-pressed="false">🔁 Español → francés</button>
+<button class="chip" type="button" data-mode="listen" aria-pressed="false">🎧 Escucha</button>
+</div>
+<div class="card" style="margin-top:12px">
+<span class="tag" id="qcount"></span>
+<h2 id="question"></h2>
+<button class="btn alt small" id="qSay" type="button" data-say="" hidden>🔊 Escuchar</button>
+<div class="opts" id="answers"></div>
+<p class="fb" id="feedback" aria-live="polite"></p>
+<button class="btn" id="nextBtn" type="button" disabled>Siguiente</button>
+</div>
+<div class="grid">
+<article class="card"><h3>Completa la frase</h3>
+<form id="fillForm"><label for="fillAnswer">«Je m’___ Marie.» (Me llamo Marie.)</label>
+<input id="fillAnswer" class="field" placeholder="Escribe la palabra que falta" autocomplete="off" autocapitalize="off" spellcheck="false">
+<button class="btn" type="submit">Comprobar</button></form>
+<p class="fb" id="fillFeedback" aria-live="polite"></p></article>
+<article class="card"><h3>Verdadero o falso</h3>
+<p>«Une pomme» significa «una manzana».</p>
+<div class="actions" style="margin:0"><button class="btn alt" type="button" data-tf="1">Verdadero</button><button class="btn alt" type="button" data-tf="0">Falso</button></div>
+<p class="fb" id="tfFeedback" aria-live="polite" style="margin-top:12px"></p></article>
+</div>
+</section>
+
+<section id="francia" class="page" hidden>
+<h1 tabindex="-1">Conoce Francia</h1>
+<p class="muted">Aprende francés mientras descubres lugares y tradiciones.</p>
+<div class="grid">
+<article class="card place"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=75" alt="Torre Eiffel en París" width="700" height="466" loading="lazy" decoding="async" onerror="this.remove()"><h3>Paris</h3><p>La capital de Francia. <em lang="fr">La tour Eiffel</em> es la Torre Eiffel.</p><button class="btn alt" type="button" data-say="Bienvenue à Paris. La tour Eiffel.">🔊 Escuchar</button></article>
+<article class="card place"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=700&q=75" alt="Calle de París" width="700" height="466" loading="lazy" decoding="async" onerror="this.remove()"><h3>La vie parisienne</h3><p>Calles, cafés y edificios forman parte de la vida parisina: <em lang="fr">une rue, un café, une ville</em>.</p><button class="btn alt" type="button" data-say="Une rue, un café, une ville">🔊 Escuchar</button></article>
+<article class="card place"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=75" alt="Pan francés" width="700" height="466" loading="lazy" decoding="async" onerror="this.remove()"><h3>La gastronomie</h3><p>Prueba <em lang="fr">le pain</em> (el pan) y <em lang="fr">le fromage</em> (el queso).</p><button class="btn alt" type="button" data-say="Le pain, le fromage">🔊 Escuchar</button></article>
+</div>
+<h2 style="margin-top:28px">Costumbres y vocabulario</h2>
+<div class="grid">
+<article class="card"><div class="emoji" aria-hidden="true">🥐</div><h3>Le petit déjeuner</h3><p>El desayuno francés suele ser ligero: <em lang="fr">un croissant et un café au lait</em>.</p><button class="btn alt" type="button" data-say="Un croissant et un café au lait, s’il vous plaît.">🔊 Escuchar</button></article>
+<article class="card"><div class="emoji" aria-hidden="true">🎆</div><h3>Le 14 juillet</h3><p>La fiesta nacional de Francia. Se grita <em lang="fr">Vive la France !</em> (¡Viva Francia!).</p><button class="btn alt" type="button" data-say="Joyeux quatorze juillet ! Vive la France !">🔊 Escuchar</button></article>
+<article class="card"><div class="emoji" aria-hidden="true">😘</div><h3>La bise</h3><p>Es habitual saludar con besos en la mejilla entre amigos y familia: <em lang="fr">faire la bise</em>.</p><button class="btn alt" type="button" data-say="Salut ! On se fait la bise ?">🔊 Escuchar</button></article>
+<article class="card"><div class="emoji" aria-hidden="true">🎨</div><h3>Les musées</h3><p>El Louvre es uno de los museos más visitados del mundo: <em lang="fr">Le Louvre est un grand musée.</em></p><button class="btn alt" type="button" data-say="Le Louvre est un grand musée.">🔊 Escuchar</button></article>
+<article class="card"><div class="emoji" aria-hidden="true">🚴</div><h3>Le Tour de France</h3><p>La gran carrera ciclista de cada verano: <em lang="fr">Le Tour de France passe par ma ville.</em></p><button class="btn alt" type="button" data-say="Le Tour de France passe par ma ville.">🔊 Escuchar</button></article>
+<article class="card"><div class="emoji" aria-hidden="true">🥂</div><h3>À table !</h3><p>Antes de comer se dice <em lang="fr">Bon appétit !</em> y al brindar, <em lang="fr">Santé !</em></p><button class="btn alt" type="button" data-say="Bon appétit ! Santé !">🔊 Escuchar</button></article>
+</div>
+</section>
+
+<section id="perfil" class="page" hidden>
+<h1 tabindex="-1">Mi perfil</h1>
+<div class="card" style="margin-top:20px;max-width:560px">
+<p class="muted">Guarda tu nombre para personalizar la página. Todo se queda en este navegador: no hay cuenta ni servidor.</p>
+<form id="profileForm"><label for="username">Tu nombre</label>
+<input id="username" class="field" maxlength="30" placeholder="Escribe tu nombre" autocomplete="given-name">
+<button class="btn" type="submit">Guardar nombre</button></form>
+<p class="fb" id="profileMsg" aria-live="polite"></p>
+<h3>Tu avance</h3>
+<p>Puntos: <b id="pPoints">0</b><br>Respuestas correctas: <b id="pCorrect">0</b></p>
+<h3>Sonido</h3>
+<p class="note voiceInfo" hidden></p>
+<div id="voiceWrap" hidden><label for="voiceSel">Voz francesa</label>
+<select id="voiceSel" class="field"></select></div>
+<button class="btn alt" type="button" data-say="Bonjour ! Bienvenue sur Français Facile.">🔊 Probar voz</button>
+<p class="muted" style="margin-top:12px">La velocidad se cambia con el botón «Voz lenta» de la cabecera.</p>
+<hr style="border:0;border-top:1px solid var(--line2);margin:16px 0">
+<button class="btn alt" type="button" id="resetBtn">Reiniciar progreso</button>
+</div>
+</section>
+</main>
+<footer>
+<p><strong>Français Facile</strong>, un proyecto de código abierto para aprender francés paso a paso.</p>
+<p>Fotografías de Unsplash, que necesitan conexión a internet. La pronunciación usa las voces francesas de tu navegador o sistema; si no se oye, comprueba el volumen y que tengas instalada una voz francesa.</p>
+</footer>
+<div id="toast" role="status" hidden></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>String(s).toLowerCase().replace(/[’‘`]/g,"'").normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const rand=a=>a[Math.floor(Math.random()*a.length)];
+
+/* ---------- Estado guardado ---------- */
+const KEY='francais-facile-v1';
+let S={name:'',done:[],fav:[],rate:.85,voice:'',streak:0,last:''};
+try{const r=JSON.parse(localStorage.getItem(KEY));if(r&&Array.isArray(r.done)){
+S.name=String(r.name||'').slice(0,30);S.done=r.done.filter(x=>typeof x==='string');
+S.fav=Array.isArray(r.fav)?r.fav.filter(x=>typeof x==='string'):[];
+S.rate=r.rate===.6?.6:.85;S.voice=typeof r.voice==='string'?r.voice:'';
+S.streak=+r.streak||0;S.last=typeof r.last==='string'?r.last:''}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const ymd=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function touch(){const t=ymd(new Date());if(S.last===t)return;const y=new Date();y.setDate(y.getDate()-1);S.streak=S.last===ymd(y)?S.streak+1:1;S.last=t;save()}
+function streakNow(){const t=new Date(),y=new Date();y.setDate(y.getDate()-1);return(S.last===ymd(t)||S.last===ymd(y))?S.streak:0}
+
+/* ---------- Datos ---------- */
+const LESSONS=[
+{i:'👋',t:'Saludos',l:[['Bonjour !','Buenos días / Hola'],['Bonsoir !','Buenas tardes / noches'],['Salut !','¡Hola! (informal)'],['Au revoir !','Adiós'],['À bientôt !','¡Hasta pronto!']]},
+{i:'🙋',t:'Presentarse',l:[['Je m’appelle Ana.','Me llamo Ana.'],['Comment tu t’appelles ?','¿Cómo te llamas?'],['Enchanté(e) !','Mucho gusto'],['J’habite à La Paz.','Vivo en La Paz.']]},
+{i:'🔢',t:'Números del 1 al 10',l:[['Un, deux, trois','Uno, dos, tres'],['Quatre, cinq, six','Cuatro, cinco, seis'],['Sept, huit, neuf, dix','Siete, ocho, nueve, diez']]},
+{i:'🧩',t:'Verbo être (ser/estar)',l:[['Je suis','Yo soy / estoy'],['Tu es','Tú eres / estás'],['Il est, elle est','Él es / está, ella es / está'],['Nous sommes','Nosotros somos / estamos'],['Vous êtes','Usted/ustedes es/son, están'],['Ils sont','Ellos son / están']]},
+{i:'🎒',t:'Verbo avoir (tener)',l:[['J’ai','Yo tengo'],['Tu as','Tú tienes'],['Il a, elle a','Él tiene, ella tiene'],['Nous avons','Nosotros tenemos'],['Vous avez','Usted/ustedes tiene(n)'],['Ils ont','Ellos tienen']]},
+{i:'🙏',t:'Cortesía',l:[['S’il vous plaît','Por favor'],['Merci beaucoup','Muchas gracias'],['De rien','De nada'],['Excusez-moi','Disculpe']]},
+{i:'☕',t:'En el café',l:[['Un café, s’il vous plaît.','Un café, por favor.'],['Un verre d’eau, s’il vous plaît.','Un vaso de agua, por favor.'],['L’addition, s’il vous plaît.','La cuenta, por favor.']]},
+{i:'❓',t:'Palabras para preguntar',l:[['Qui ?','¿Quién?'],['Où ?','¿Dónde?'],['Quand ?','¿Cuándo?'],['Pourquoi ?','¿Por qué?'],['Comment ?','¿Cómo?'],['Combien ?','¿Cuánto?']]},
+{i:'📅',t:'Días de la semana',l:[['Lundi, mardi, mercredi','Lunes, martes, miércoles'],['Jeudi, vendredi','Jueves, viernes'],['Samedi, dimanche','Sábado, domingo']]},
+{i:'🎨',t:'Colores',l:[['Rouge, bleu, vert','Rojo, azul, verde'],['Jaune, noir, blanc','Amarillo, negro, blanco'],['Rose, orange, gris','Rosa, naranja, gris']]},
+{i:'🚫',t:'Decir que no',l:[['Je ne parle pas anglais.','No hablo inglés.'],['Je ne sais pas.','No sé.'],['Il n’y a pas de problème.','No hay problema.']]},
+{i:'👍',t:'Gustos',l:[['J’aime le café.','Me gusta el café.'],['Je n’aime pas le froid.','No me gusta el frío.'],['J’adore voyager.','Me encanta viajar.']]}];
+
+const VOCAB=[['☕','Une tasse','Una taza'],['🪑','Une chaise','Una silla'],['🍎','Une pomme','Una manzana'],['📖','Un livre','Un libro'],['🐱','Un chat','Un gato'],['🐶','Un chien','Un perro'],['🥖','Un pain','Un pan'],['💧','De l’eau','Agua'],['🧀','Un fromage','Un queso'],['🏠','Une maison','Una casa'],['☀️','Un soleil','Un sol'],['🌸','Une fleur','Una flor'],
+['🍌','Une banane','Una banana'],['🍊','Une orange','Una naranja'],['🍓','Une fraise','Una fresa'],['🥕','Une carotte','Una zanahoria'],['🍅','Une tomate','Un tomate'],['🥛','Du lait','Leche'],['🍷','Du vin','Vino'],['🍰','Un gâteau','Un pastel / una torta'],
+['🚗','Une voiture','Un coche / un auto'],['🚲','Un vélo','Una bicicleta'],['✈️','Un avion','Un avión'],['🚆','Un train','Un tren'],['🚌','Un bus','Un autobús'],['🏫','Une école','Una escuela'],['🏥','Un hôpital','Un hospital'],['🏦','Une banque','Un banco'],['🛒','Un supermarché','Un supermercado'],
+['🌳','Un arbre','Un árbol'],['🌙','Une lune','Una luna'],['⭐','Une étoile','Una estrella'],['🌧️','La pluie','La lluvia'],['❄️','La neige','La nieve'],
+['👕','Une chemise','Una camisa'],['👖','Un pantalon','Un pantalón'],['👟','Une chaussure','Un zapato'],['🎒','Un sac à dos','Una mochila'],
+['📱','Un téléphone','Un teléfono'],['💻','Un ordinateur','Un ordenador / una computadora'],['🔑','Une clé','Una llave'],['⌚','Une montre','Un reloj de pulsera'],['🎵','La musique','La música'],['⚽','Le football','El fútbol'],['🖊️','Un stylo','Un bolígrafo'],
+['🛏️','Un lit','Una cama'],['🚪','Une porte','Una puerta'],['🪟','Une fenêtre','Una ventana'],['👨‍👩‍👧','Une famille','Una familia'],['🇫🇷','La France','Francia']].map(w=>({e:w[0],fr:w[1],es:w[2]}));
+
+/* Frases: "francés|español" */
+const CATS=[
+["saludos","👋","Saludos",[
+"Bonjour !|Hola / Buenos días","Bonsoir !|Buenas tardes / noches","Salut !|¡Hola! (informal)","Bonne nuit !|Buenas noches (para dormir)","Au revoir !|Adiós","À bientôt !|¡Hasta pronto!","À demain !|¡Hasta mañana!","À tout à l’heure !|¡Hasta luego!","Bonne journée !|¡Que tengas un buen día!","Bonne soirée !|¡Que tengas una buena tarde / noche!","Bon week-end !|¡Buen fin de semana!","Comment allez-vous ?|¿Cómo está usted?","Comment ça va ?|¿Qué tal?","Ça va bien, merci.|Estoy bien, gracias.","Pas mal, et toi ?|No está mal, ¿y tú?","Bienvenue !|¡Bienvenido/a!"]],
+["cortesia","🙏","Cortesía",[
+"S’il vous plaît|Por favor (formal)","S’il te plaît|Por favor (informal)","Merci|Gracias","Merci beaucoup|Muchas gracias","De rien|De nada","Je vous en prie|No hay de qué (formal)","Excusez-moi|Disculpe","Pardon|Perdón","Je suis désolé(e).|Lo siento.","Pas de problème.|No hay problema.","Avec plaisir !|¡Con gusto!","Félicitations !|¡Felicidades!","Bon appétit !|¡Buen provecho!","À vos souhaits !|¡Salud! (al estornudar)","Santé !|¡Salud! (al brindar)","Bonne chance !|¡Buena suerte!"]],
+["presentarse","🙋","Presentarse",[
+"Je m’appelle Ana.|Me llamo Ana.","Comment vous appelez-vous ?|¿Cómo se llama usted?","Comment tu t’appelles ?|¿Cómo te llamas?","Enchanté(e) !|Mucho gusto","Je viens de Bolivie.|Vengo de Bolivia.","D’où venez-vous ?|¿De dónde viene usted?","J’habite à La Paz.|Vivo en La Paz.","J’ai vingt-cinq ans.|Tengo veinticinco años.","Quel âge as-tu ?|¿Cuántos años tienes?","Je suis étudiant(e).|Soy estudiante.","Je travaille dans un bureau.|Trabajo en una oficina.","Je parle espagnol.|Hablo español.","J’apprends le français.|Estoy aprendiendo francés.","Voici mon ami.|Este es mi amigo.","C’est ma famille.|Esta es mi familia.","Je suis célibataire.|Soy soltero/a."]],
+["conversar","🗣️","Entenderse",[
+"Je ne comprends pas.|No entiendo.","Je comprends.|Entiendo.","Pouvez-vous répéter, s’il vous plaît ?|¿Puede repetir, por favor?","Parlez plus lentement, s’il vous plaît.|Hable más despacio, por favor.","Parlez-vous espagnol ?|¿Habla español?","Parlez-vous anglais ?|¿Habla inglés?","Je parle un peu français.|Hablo un poco de francés.","Comment dit-on « gracias » en français ?|¿Cómo se dice «gracias» en francés?","Qu’est-ce que cela veut dire ?|¿Qué quiere decir esto?","Comment ça s’écrit ?|¿Cómo se escribe?","Je ne sais pas.|No sé.","Je pense que oui.|Creo que sí.","Bien sûr !|¡Claro que sí!","D’accord.|De acuerdo.","Peut-être.|Quizás.","Ça m’est égal.|Me da igual."]],
+["preguntas","❓","Preguntas útiles",[
+"Qu’est-ce que c’est ?|¿Qué es esto?","Où est… ?|¿Dónde está…?","Où sont les toilettes ?|¿Dónde están los baños?","Quand ?|¿Cuándo?","Pourquoi ?|¿Por qué?","Parce que…|Porque…","Combien ça coûte ?|¿Cuánto cuesta?","Quelle heure est-il ?|¿Qué hora es?","Qui est-ce ?|¿Quién es?","Comment faire ?|¿Cómo se hace?","Pouvez-vous m’aider ?|¿Puede ayudarme?","Qu’est-ce que vous recommandez ?|¿Qué recomienda?","Est-ce que c’est loin ?|¿Está lejos?","Y a-t-il du Wi-Fi ?|¿Hay Wi-Fi?","Quel est votre numéro de téléphone ?|¿Cuál es su número de teléfono?"]],
+["restaurante","🍽️","Restaurante",[
+"Une table pour deux, s’il vous plaît.|Una mesa para dos, por favor.","Je voudrais réserver une table.|Quisiera reservar una mesa.","Le menu, s’il vous plaît.|El menú, por favor.","Qu’est-ce que vous me conseillez ?|¿Qué me aconseja?","Je voudrais un café.|Quisiera un café.","Je prends le plat du jour.|Tomo el plato del día.","Un verre d’eau, s’il vous plaît.|Un vaso de agua, por favor.","Une carafe d’eau, s’il vous plaît.|Una jarra de agua, por favor.","Je suis végétarien(ne).|Soy vegetariano/a.","Je suis allergique aux noix.|Soy alérgico/a a las nueces.","C’est délicieux !|¡Está delicioso!","L’addition, s’il vous plaît.|La cuenta, por favor.","Puis-je payer par carte ?|¿Puedo pagar con tarjeta?","Le service est-il compris ?|¿El servicio está incluido?","Sans sucre, s’il vous plaît.|Sin azúcar, por favor.","Encore du pain, s’il vous plaît.|Más pan, por favor."]],
+["compras","🛍️","Compras",[
+"Je regarde seulement, merci.|Solo estoy mirando, gracias.","Je cherche un cadeau.|Busco un regalo.","Avez-vous cela en plus grand ?|¿Lo tiene en una talla más grande?","Avez-vous cela en plus petit ?|¿Lo tiene en una talla más pequeña?","Puis-je l’essayer ?|¿Puedo probármelo?","C’est trop cher.|Es demasiado caro.","Avez-vous quelque chose de moins cher ?|¿Tiene algo más barato?","Je le prends.|Me lo llevo.","Je voudrais un sac, s’il vous plaît.|Quisiera una bolsa, por favor.","Où est la caisse ?|¿Dónde está la caja?","Est-ce que vous acceptez les cartes ?|¿Aceptan tarjetas?","Je voudrais un reçu.|Quisiera un recibo.","Quels sont vos horaires d’ouverture ?|¿Cuál es su horario de apertura?","C’est ouvert jusqu’à quelle heure ?|¿Hasta qué hora está abierto?","Je voudrais échanger cet article.|Quisiera cambiar este artículo."]],
+["viajes","🚆","Viajes y transporte",[
+"Où est la gare ?|¿Dónde está la estación?","Un billet pour Lyon, s’il vous plaît.|Un billete para Lyon, por favor.","Un aller simple|Un billete de ida","Un aller-retour|Ida y vuelta","À quelle heure part le train ?|¿A qué hora sale el tren?","Quel quai ?|¿Qué andén?","Le train est en retard.|El tren llega tarde.","Où est l’arrêt de bus ?|¿Dónde está la parada de autobús?","Où est le métro le plus proche ?|¿Dónde está el metro más cercano?","J’ai perdu mon passeport.|He perdido mi pasaporte.","Voici mon passeport.|Aquí está mi pasaporte.","Je voudrais un taxi.|Quisiera un taxi.","À cette adresse, s’il vous plaît.|A esta dirección, por favor.","Où puis-je louer une voiture ?|¿Dónde puedo alquilar un coche?","Mon vol est annulé.|Mi vuelo está cancelado.","Où est l’aéroport ?|¿Dónde está el aeropuerto?"]],
+["direcciones","🧭","Direcciones",[
+"Tournez à gauche.|Gire a la izquierda.","Tournez à droite.|Gire a la derecha.","Allez tout droit.|Siga recto.","C’est à côté de la banque.|Está al lado del banco.","C’est en face de l’hôtel.|Está enfrente del hotel.","C’est près d’ici.|Está cerca de aquí.","C’est loin d’ici.|Está lejos de aquí.","Prenez la première rue à gauche.|Tome la primera calle a la izquierda.","Traversez le pont.|Cruce el puente.","Pouvez-vous me montrer sur la carte ?|¿Puede mostrármelo en el mapa?","Je suis perdu(e).|Estoy perdido/a.","Comment aller à la tour Eiffel ?|¿Cómo se va a la torre Eiffel?","C’est à dix minutes à pied.|Está a diez minutos a pie.","Au coin de la rue|En la esquina de la calle","Au carrefour|En el cruce"]],
+["hotel","🏨","Hotel",[
+"J’ai une réservation.|Tengo una reserva.","Je voudrais une chambre pour deux nuits.|Quisiera una habitación para dos noches.","Avez-vous une chambre libre ?|¿Tiene una habitación libre?","Le petit déjeuner est-il inclus ?|¿El desayuno está incluido?","À quelle heure est le petit déjeuner ?|¿A qué hora es el desayuno?","Quel est le mot de passe du Wi-Fi ?|¿Cuál es la contraseña del Wi-Fi?","La clé de ma chambre, s’il vous plaît.|La llave de mi habitación, por favor.","Il n’y a pas d’eau chaude.|No hay agua caliente.","La climatisation ne marche pas.|El aire acondicionado no funciona.","Pouvez-vous garder mes bagages ?|¿Puede guardar mi equipaje?","Je pars demain matin.|Me voy mañana por la mañana.","Je voudrais régler ma note.|Quisiera pagar mi cuenta."]],
+["emergencias","🚑","Salud y emergencias",[
+"Au secours !|¡Socorro!","Appelez la police !|¡Llame a la policía!","Appelez une ambulance !|¡Llame a una ambulancia!","J’ai besoin d’un médecin.|Necesito un médico.","Je ne me sens pas bien.|No me siento bien.","J’ai mal à la tête.|Me duele la cabeza.","J’ai mal au ventre.|Me duele el estómago.","J’ai de la fièvre.|Tengo fiebre.","Je suis malade.|Estoy enfermo/a.","Où est la pharmacie ?|¿Dónde está la farmacia?","Où est l’hôpital ?|¿Dónde está el hospital?","Je suis allergique à la pénicilline.|Soy alérgico/a a la penicilina.","On m’a volé mon sac.|Me han robado el bolso.","C’est urgent !|¡Es urgente!","J’ai besoin d’aide.|Necesito ayuda."]],
+["tiempo","⛅","Tiempo y fechas",[
+"Quel temps fait-il ?|¿Qué tiempo hace?","Il fait beau.|Hace buen tiempo.","Il fait chaud.|Hace calor.","Il fait froid.|Hace frío.","Il pleut.|Está lloviendo.","Il neige.|Está nevando.","Il y a du vent.|Hay viento.","Quel jour sommes-nous ?|¿Qué día es hoy?","Aujourd’hui, c’est lundi.|Hoy es lunes.","Demain, c’est mardi.|Mañana es martes.","Hier, c’était dimanche.|Ayer fue domingo.","Il est huit heures.|Son las ocho.","Il est midi.|Es mediodía.","Il est minuit.|Es medianoche.","Le matin, l’après-midi, le soir|Por la mañana, por la tarde, por la noche","Cette semaine|Esta semana","Le mois prochain|El mes próximo","L’année dernière|El año pasado"]],
+["familia","👨‍👩‍👧","Familia y personas",[
+"Voici ma mère et mon père.|Estos son mi madre y mi padre.","J’ai un frère et une sœur.|Tengo un hermano y una hermana.","Ma famille est grande.|Mi familia es grande.","Mon grand-père est gentil.|Mi abuelo es amable.","Elle est ma meilleure amie.|Ella es mi mejor amiga.","Il a deux enfants.|Él tiene dos hijos.","Nous sommes cousins.|Somos primos.","Mon mari / ma femme|Mi esposo / mi esposa","Mon oncle et ma tante|Mi tío y mi tía","Il est grand et brun.|Es alto y moreno.","Elle est petite et blonde.|Es bajita y rubia.","Ils sont très drôles.|Son muy graciosos."]],
+["emociones","😊","Sentimientos y gustos",[
+"Je suis content(e).|Estoy contento/a.","Je suis triste.|Estoy triste.","Je suis fatigué(e).|Estoy cansado/a.","J’ai faim.|Tengo hambre.","J’ai soif.|Tengo sed.","J’ai peur.|Tengo miedo.","J’ai chaud.|Tengo calor.","J’ai froid.|Tengo frío.","J’ai sommeil.|Tengo sueño.","J’aime beaucoup ça.|Me gusta mucho.","Je n’aime pas ça.|No me gusta.","J’adore la musique.|Me encanta la música.","Je préfère le thé.|Prefiero el té.","Je suis d’accord.|Estoy de acuerdo.","Je ne suis pas d’accord.|No estoy de acuerdo.","C’est génial !|¡Es genial!","C’est dommage.|Qué pena."]],
+["trabajo","💼","Trabajo y estudios",[
+"Je travaille comme ingénieur.|Trabajo como ingeniero.","Je suis en vacances.|Estoy de vacaciones.","J’étudie à l’université.|Estudio en la universidad.","J’ai un rendez-vous à trois heures.|Tengo una cita a las tres.","Voici ma carte de visite.|Aquí está mi tarjeta de visita.","Pouvez-vous m’envoyer un e-mail ?|¿Puede enviarme un correo?","Quelle est votre adresse e-mail ?|¿Cuál es su correo electrónico?","Mon numéro de téléphone est le…|Mi número de teléfono es el…","J’ai un examen demain.|Tengo un examen mañana.","Je fais mes devoirs.|Hago mis deberes.","La réunion commence à dix heures.|La reunión empieza a las diez.","Je suis en retard.|Llego tarde."]],
+["expresiones","✨","Expresiones comunes",[
+"C’est la vie !|¡Así es la vida!","Pas du tout.|Para nada.","Tout à fait.|Totalmente.","Ça dépend.|Depende.","Tant mieux !|¡Qué bien!","Tant pis.|Qué se le va a hacer.","Je m’en occupe.|Yo me encargo.","Ça marche !|¡Vale! / ¡Perfecto!","Attention !|¡Cuidado!","Ça fait longtemps !|¡Cuánto tiempo sin verte!","Qu’est-ce qui se passe ?|¿Qué pasa?","Ce n’est pas grave.|No es grave.","Je n’en peux plus.|No puedo más.","Il était une fois…|Érase una vez…"]],
+["numeros","🔢","Números y precios",[
+"Zéro, un, deux, trois|Cero, uno, dos, tres","Quatre, cinq, six, sept|Cuatro, cinco, seis, siete","Huit, neuf, dix|Ocho, nueve, diez","Onze, douze, treize, quatorze|Once, doce, trece, catorce","Quinze, seize, dix-sept|Quince, dieciséis, diecisiete","Vingt, trente, quarante|Veinte, treinta, cuarenta","Cinquante, soixante|Cincuenta, sesenta","Soixante-dix, quatre-vingts|Setenta, ochenta","Quatre-vingt-dix, cent|Noventa, cien","Mille|Mil","Ça coûte dix euros.|Cuesta diez euros.","Vingt-cinq euros cinquante|Veinticinco euros con cincuenta"]]
+];
+const PHR=CATS.flatMap(c=>c[3].map(s=>{const [fr,es]=s.split('|');return{fr,es,c:c[0],h:norm(fr+' '+es)}}));
+
+/* ---------- Voz ---------- */
+const canSpeak='speechSynthesis'in window&&'SpeechSynthesisUtterance'in window;
+let frVoices=[],frVoice=null,curBtn=null,speakTimer,safeTimer;
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,3500)}
+function loadVoices(){
+if(!canSpeak)return voiceUI(0);
+const all=speechSynthesis.getVoices();
+frVoices=all.filter(v=>/^fr([-_]|$)/i.test(v.lang)).sort((a,b)=>(/fr[-_]fr/i.test(b.lang)-/fr[-_]fr/i.test(a.lang)));
+frVoice=frVoices.find(v=>v.name===S.voice)||frVoices[0]||null;
+voiceUI(all.length)}
+function voiceUI(total){
+let msg='';
+if(!canSpeak)msg='Tu navegador no admite audio de pronunciación. Prueba con Chrome, Edge o Safari actualizados.';
+else if(frVoice)msg='';
+else if(total>0)msg='No encuentro una voz francesa en tu dispositivo, así que el audio puede sonar con acento español. Instala el idioma francés en los ajustes de voz o idioma del sistema para mejorarlo.';
+$$('.voiceInfo').forEach(p=>{p.textContent=msg;p.hidden=!msg});
+const sel=$('#voiceSel');sel.replaceChildren();
+frVoices.forEach(v=>{const o=document.createElement('option');o.value=v.name;o.textContent=v.name+' ('+v.lang+')';o.selected=frVoice&&v.name===frVoice.name;sel.append(o)});
+$('#voiceWrap').hidden=frVoices.length<2}
+if(canSpeak){loadVoices();speechSynthesis.onvoiceschanged=loadVoices;setTimeout(loadVoices,800);setTimeout(loadVoices,2500)}else voiceUI(0);
+function stopUi(){clearTimeout(safeTimer);if(curBtn){curBtn.classList.remove('playing');curBtn=null}}
+function speak(text,rate,btn){
+if(!text)return;
+if(!canSpeak)return toast('Tu navegador no permite audio de pronunciación.');
+clearTimeout(speakTimer);speechSynthesis.cancel();stopUi();
+const u=new SpeechSynthesisUtterance(text);
+u.lang='fr-FR';u.rate=rate||S.rate;u.volume=1;
+if(frVoice){u.voice=frVoice;u.lang=frVoice.lang.replace('_','-')}
+if(btn){curBtn=btn;btn.classList.add('playing');safeTimer=setTimeout(stopUi,20000)}
+const done=()=>{if(btn&&curBtn===btn)stopUi()};
+u.onend=done;
+u.onerror=e=>{done();if(e.error&&!['canceled','interrupted'].includes(e.error))toast('No se pudo reproducir el audio ('+e.error+').')};
+speakTimer=setTimeout(()=>{try{speechSynthesis.resume()}catch(_){}speechSynthesis.speak(u)},80)}
+
+/* Clics globales: audio, favoritas, copiar */
+document.addEventListener('click',e=>{
+const s=e.target.closest('[data-say]');
+if(s&&s.dataset.say){speak(s.dataset.say,s.dataset.rate?+s.dataset.rate:0,s);return}
+const f=e.target.closest('[data-fav]');
+if(f){const k=f.dataset.fav,i=S.fav.indexOf(k);if(i<0)S.fav.push(k);else S.fav.splice(i,1);save();renderChips();ui();
+if(pcat==='fav'){renderPhrases();$('#psearch').focus()}else{const on=i<0;f.classList.toggle('on',on);f.setAttribute('aria-pressed',on);f.textContent=on?'★':'☆'}
+toast(i<0?'Guardada en favoritas':'Quitada de favoritas');return}
+const c=e.target.closest('[data-copy]');
+if(c){(navigator.clipboard?navigator.clipboard.writeText(c.dataset.copy):Promise.reject()).then(()=>toast('Frase copiada'),()=>toast('No se pudo copiar'))}});
+
+/* ---------- Progreso ---------- */
+function ui(){
+const n=S.done.length,pts=n*10,lvl=Math.floor(pts/100)+1,into=pts%100;
+$('#points').textContent=pts;$('#level').textContent=lvl;
+$('#pPoints').textContent=pts;$('#pCorrect').textContent=n;
+$('#bar').style.width=into+'%';$('#barwrap').setAttribute('aria-valuenow',into);
+$('#next').textContent='Te faltan '+(100-into)+' puntos para el nivel '+(lvl+1)+'.';
+$('#streak').textContent=streakNow();$('#favCount').textContent=S.fav.length;
+$('#hello').textContent=S.name?'Tu progreso, '+S.name:'Tu progreso';$('#username').value=S.name;
+const slow=S.rate<.8;$('#speedBtn').textContent='🐢 Voz lenta: '+(slow?'sí':'no');$('#speedBtn').setAttribute('aria-pressed',slow)}
+function award(id){touch();if(S.done.includes(id))return false;S.done.push(id);save();ui();return true}
+function say(el,msg,ok){el.textContent=msg;el.className='fb '+(ok?'ok':'bad')}
+$('#speedBtn').addEventListener('click',()=>{S.rate=S.rate<.8?.85:.6;save();ui();toast(S.rate<.8?'Audio en modo lento':'Audio a velocidad normal')});
+$('#voiceSel').addEventListener('change',e=>{S.voice=e.target.value;save();loadVoices()});
+
+/* ---------- Lecciones ---------- */
+const lineBtn=(t)=>`<button class="ico sm" type="button" data-say="${esc(t)}" aria-label="Escuchar: ${esc(t)}">🔊</button>`;
+$('#lessons').innerHTML=LESSONS.map(x=>`<article class="card"><div class="emoji" aria-hidden="true">${x.i}</div><h3>${esc(x.t)}</h3>${x.l.map(p=>`<p class="line">${lineBtn(p[0])}<span><b class="fr" lang="fr">${esc(p[0])}</b><br>${esc(p[1])}</span></p>`).join('')}<button class="btn alt" type="button" data-say="${esc(x.l.map(p=>p[0]).join('. '))}">🔊 Escuchar todo</button></article>`).join('');
+
+/* ---------- Frases ---------- */
+let pcat='all';
+function row(p){const fav=S.fav.includes(p.fr);return `<li class="prow"><div class="txt"><span class="fr" lang="fr">${esc(p.fr)}</span><span class="es">${esc(p.es)}</span></div><div class="tools"><button class="ico" type="button" data-say="${esc(p.fr)}" aria-label="Escuchar: ${esc(p.fr)}" title="Escuchar">🔊</button><button class="ico" type="button" data-say="${esc(p.fr)}" data-rate=".5" aria-label="Escuchar despacio: ${esc(p.fr)}" title="Despacio">🐢</button><button class="ico${fav?' on':''}" type="button" data-fav="${esc(p.fr)}" aria-pressed="${fav}" aria-label="Favorita: ${esc(p.fr)}" title="Favorita">${fav?'★':'☆'}</button><button class="ico" type="button" data-copy="${esc(p.fr)}" aria-label="Copiar: ${esc(p.fr)}" title="Copiar">📋</button></div></li>`}
+function renderChips(){
+const items=[['all','','Todas ('+PHR.length+')'],['fav','⭐','Favoritas ('+S.fav.length+')'],...CATS.map(c=>[c[0],c[1],c[2]])];
+$('#chips').innerHTML=items.map(c=>`<button class="chip" type="button" data-cat="${c[0]}" aria-pressed="${c[0]===pcat}">${c[1]?c[1]+' ':''}${esc(c[2])}</button>`).join('')}
+function renderPhrases(){
+const terms=norm($('#psearch').value.trim()).split(/\s+/).filter(Boolean);
+let list=PHR;
+if(pcat==='fav')list=PHR.filter(p=>S.fav.includes(p.fr));else if(pcat!=='all')list=PHR.filter(p=>p.c===pcat);
+if(terms.length)list=list.filter(p=>terms.every(t=>p.h.includes(t)));
+$('#plist').innerHTML=list.map(row).join('');
+$('#pcount').textContent=list.length===1?'1 frase':list.length+' frases';
+const em=$('#pempty');em.hidden=list.length>0;
+em.textContent=pcat==='fav'&&!terms.length?'Aún no tienes favoritas. Pulsa ☆ en una frase para guardarla.':'No hay resultados. Prueba con otra palabra o elige «Todas».'}
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;pcat=b.dataset.cat;renderChips();renderPhrases()});
+$('#psearch').addEventListener('input',renderPhrases);
+
+/* Frase del día */
+let pod;
+function showPod(p){pod=p;$('#podFr').textContent=p.fr;$('#podEs').textContent=p.es;$('#podPlay').dataset.say=p.fr;$('#podSlow').dataset.say=p.fr}
+{const d=new Date(),n=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);showPod(PHR[n%PHR.length])}
+$('#podNext').addEventListener('click',()=>{let p;do{p=rand(PHR)}while(p===pod);showPod(p);speak(p.fr,0,$('#podPlay'))});
+
+/* ---------- Vocabulario ---------- */
+$('#vocab').innerHTML=VOCAB.map(w=>`<article class="card word"><div class="emoji" aria-hidden="true">${w.e}</div><div class="fr" lang="fr">${esc(w.fr)}</div><p>${esc(w.es)}</p><button class="btn alt small" type="button" data-say="${esc(w.fr)}" aria-label="Escuchar ${esc(w.fr)}">🔊 Escuchar</button><button class="btn alt small" type="button" data-say="${esc(w.fr)}" data-rate=".5" aria-label="Escuchar despacio ${esc(w.fr)}" title="Despacio">🐢</button></article>`).join('');
+$('#search').addEventListener('input',e=>{const q=norm(e.target.value.trim());let n=0;$$('#vocab .word').forEach(c=>{const ok=norm(c.textContent).includes(q);c.hidden=!ok;if(ok)n++});$('#empty').hidden=n>0});
+
+/* ---------- Juegos ---------- */
+let mode='vocab',qs=[],pos=0,answered=false,correctN=0;
+const dedupe=a=>a.filter((x,i)=>a.indexOf(x)===i);
+function makeQuestions(m,n=8){
+const src=m==='vocab'?VOCAB:PHR;
+return shuffle(src.slice()).slice(0,n).map(it=>{
+const pool=m==='vocab'?VOCAB:PHR.filter(p=>p.c===it.c);
+const key=m==='trans'?'fr':'es';
+const right=it[key];
+const wrong=shuffle(dedupe(pool.map(x=>x[key]).filter(x=>x!==right))).slice(0,2);
+const opts=shuffle([right,...wrong]);
+let prompt;
+if(m==='vocab')prompt=it.e+' ¿Qué significa «'+it.fr+'»?';
+else if(m==='phrase')prompt='¿Qué significa «'+it.fr+'»?';
+else if(m==='trans')prompt='¿Cómo se dice «'+it.es+'» en francés?';
+else prompt='🎧 Escucha y elige el significado';
+return{id:m+':'+it.fr,prompt,fr:it.fr,es:it.es,opts,c:opts.indexOf(right),say:(m==='vocab'||m==='phrase'||m==='listen')?it.fr:'',auto:m==='listen'}})}
+function startMode(m){mode=m;qs=makeQuestions(m);pos=0;correctN=0;
+$$('#modes .chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));renderQ()}
+function renderQ(){
+const box=$('#answers'),nx=$('#nextBtn'),qb=$('#qSay');answered=false;$('#feedback').textContent='';$('#feedback').className='fb';box.replaceChildren();
+if(pos>=qs.length){$('#qcount').textContent='Ronda terminada';$('#question').textContent='Has acertado '+correctN+' de '+qs.length+'.';qb.hidden=true;nx.textContent='Jugar otra vez';nx.disabled=false;return}
+const q=qs[pos];$('#qcount').textContent='Pregunta '+(pos+1)+' de '+qs.length;$('#question').textContent=q.prompt;
+qb.dataset.say=q.say;qb.hidden=!q.say;
+q.opts.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.className='btn alt';b.textContent=t;b.onclick=()=>pick(b,i);box.append(b)});
+nx.textContent=pos===qs.length-1?'Ver resultado':'Siguiente';nx.disabled=true;
+if(q.auto)speak(q.fr,0,qb)}
+function pick(b,i){if(answered)return;answered=true;const q=qs[pos],f=$('#feedback');
+[...$('#answers').children].forEach((x,j)=>{if(j===q.c)x.classList.add('right')});
+const pair=' «'+q.fr+'» = '+q.es+'.';
+if(i===q.c){correctN++;say(f,(award(q.id)?'¡Correcto! +10 puntos.':'¡Correcto! Ya habías sumado puntos con esta.')+pair,true)}
+else{touch();b.classList.add('wrong');say(f,'Casi.'+pair,false)}
+const qb=$('#qSay');qb.dataset.say=q.fr;qb.hidden=false;$('#nextBtn').disabled=false}
+$('#nextBtn').addEventListener('click',()=>{if(pos>=qs.length)startMode(mode);else{pos++;renderQ()}});
+$('#modes').addEventListener('click',e=>{const b=e.target.closest('[data-mode]');if(b)startMode(b.dataset.mode)});
+
+$('#fillForm').addEventListener('submit',e=>{e.preventDefault();const f=$('#fillFeedback');
+if(norm($('#fillAnswer').value.trim())==='appelle')say(f,award('fill')?'¡Muy bien! «Je m’appelle Marie.» +10 puntos':'¡Correcto! «Je m’appelle Marie.»',true);
+else say(f,'Inténtalo otra vez. Pista: es el verbo «llamarse».',false)});
+$$('[data-tf]').forEach(b=>b.addEventListener('click',()=>{const f=$('#tfFeedback');
+if(b.dataset.tf==='1')say(f,award('tf')?'¡Correcto! «Une pomme» es una manzana. +10 puntos':'¡Correcto! «Une pomme» es una manzana.',true);
+else say(f,'No exactamente. «Une pomme» significa una manzana.',false)}));
+
+/* ---------- Perfil ---------- */
+$('#profileForm').addEventListener('submit',e=>{e.preventDefault();const n=$('#username').value.trim().slice(0,30),m=$('#profileMsg');
+if(!n)return say(m,'Escribe tu nombre primero.',false);S.name=n;save();ui();say(m,'¡Bienvenido/a, '+n+'! Tu nombre quedó guardado.',true)});
+$('#resetBtn').addEventListener('click',()=>{if(!confirm('¿Borrar tu nombre, puntos y frases favoritas?'))return;
+S.name='';S.done=[];S.fav=[];S.streak=0;S.last='';save();ui();renderChips();renderPhrases();
+['#fillFeedback','#tfFeedback'].forEach(s=>$(s).textContent='');$('#fillAnswer').value='';say($('#profileMsg'),'Tu progreso se reinició.',true);startMode(mode)});
+
+/* ---------- Navegación por hash ---------- */
+const pages=$$('.page'),links=$$('nav a');
+function route(focus){const p=pages.find(x=>x.id===location.hash.slice(1))||pages[0];
+pages.forEach(x=>x.hidden=x!==p);
+links.forEach(a=>a.getAttribute('href')==='#'+p.id?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+document.title=p.id==='inicio'?'Français Facile | Aprende francés':p.querySelector('h1').textContent+' | Français Facile';
+if(p.id==='juegos'&&!qs.length)startMode(mode);
+window.scrollTo(0,0);if(focus)p.querySelector('h1').focus({preventScroll:true})}
+addEventListener('hashchange',()=>{if(canSpeak)speechSynthesis.cancel();stopUi();route(true)});
+renderChips();renderPhrases();ui();route(false);
+</script>
+</body>
+</html>
